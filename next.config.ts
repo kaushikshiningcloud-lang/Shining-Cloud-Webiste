@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
-const nextConfig: any = {
-  output: 'standalone',
+const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
