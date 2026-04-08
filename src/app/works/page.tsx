@@ -1,19 +1,9 @@
-import fs from 'fs';
-import path from 'path';
 import WorksGallery from '@/components/WorksGallery';
 import YouTubeArchive from '@/components/YouTubeArchive';
+import { worksImages } from '@/data/worksImages';
 
 export default async function WorksPage() {
-  const worksDir = path.join(process.cwd(), 'public', 'images', 'works');
-  let files: string[] = [];
-
-  try {
-    files = fs.readdirSync(worksDir);
-  } catch (e) {
-    console.error("Directory not found or unreadable:", e);
-  }
-  
-  const images = files.filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file));
+  const images = worksImages;
   
   return (
     <div className="w-full bg-[#020202] text-white">
