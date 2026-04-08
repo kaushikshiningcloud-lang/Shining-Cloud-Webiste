@@ -46,7 +46,7 @@ export default function FeaturedProjects() {
         <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end">
           <div className="anim-up-proj">
             <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-6 flex items-center gap-3">
-              <span className="text-white/30 text-sm">//</span> SELECTED WORKS
+              <span className="text-white/30 text-sm">{"//"}</span> SELECTED WORKS
             </p>
             <h2 className="text-4xl md:text-6xl lg:text-[6rem] font-bold tracking-[-0.03em] leading-[1]">
               RECENT <br className="hidden md:block" /> PROJECTS

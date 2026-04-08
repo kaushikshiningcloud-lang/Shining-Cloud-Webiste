@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -61,19 +60,19 @@ export default function HeroSection() {
           <div className="flex-1 relative h-full hidden lg:block">
              <div className="anim-line absolute left-0 top-0 w-[1px] bg-white/20 origin-top"></div>
              <span className="absolute top-24 left-8 text-[9px] tracking-[0.2em] font-bold text-white/50 uppercase">
-                 // Architecture
+                 {"//"} Architecture
              </span>
              <div className="anim-line absolute right-0 top-0 w-[1px] bg-white/20 origin-top"></div>
           </div>
           <div className="flex-1 relative h-full hidden md:block">
              <span className="absolute top-24 left-8 text-[9px] tracking-[0.2em] font-bold text-white/50 uppercase">
-                 // Development
+                 {"//"} Development
              </span>
              <div className="anim-line absolute right-0 top-0 w-[1px] bg-white/20 origin-top"></div>
           </div>
           <div className="flex-1 relative h-full">
              <span className="absolute top-24 left-8 text-[9px] tracking-[0.2em] font-bold text-white/50 uppercase">
-                 // Idea & Action
+                 {"//"} Idea & Action
              </span>
              <div className="anim-line absolute right-0 top-0 w-[1px] bg-white/20 origin-top"></div>
           </div>

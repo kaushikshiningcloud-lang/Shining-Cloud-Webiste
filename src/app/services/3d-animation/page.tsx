@@ -5,7 +5,7 @@ export default function AnimationPage() {
     <div className="w-full bg-archivi-light text-archivi-dark pt-48 pb-0">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 mb-16 md:mb-32">
         <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-8 flex items-center gap-3">
-          <span className="text-black/30 text-sm">//</span> SERVICE: KINETIC VISUALS
+          <span className="text-black/30 text-sm">{"//"}</span> SERVICE: KINETIC VISUALS
         </p>
         <h1 className="text-5xl md:text-[6rem] lg:text-[8rem] font-bold tracking-[-0.04em] leading-[0.85] uppercase mb-12">
           3D <br/> ANIMATION.

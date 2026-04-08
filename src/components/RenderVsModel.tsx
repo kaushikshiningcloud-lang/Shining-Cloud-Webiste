@@ -38,7 +38,7 @@ export default function RenderVsModel() {
         <div className="anim-up-rvm lg:col-span-4 bg-white p-10 flex flex-col justify-between min-h-[40vh]">
           <div>
             <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-8 flex items-center gap-3">
-              <span className="text-black/30 text-sm">//</span> FIDELITY CHECK
+              <span className="text-black/30 text-sm">{"//"}</span> FIDELITY CHECK
             </p>
             <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.03em] uppercase leading-[1.1] mb-6">
               DIGITAL <br/> CONSTRUCT <br/> VS PHYSICAL.

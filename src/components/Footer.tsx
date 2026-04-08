@@ -36,11 +36,11 @@ export default function Footer() {
         {/* Massive Let's Talk */}
         <div className="mb-24 md:mb-32">
           <p className="anim-up-footer text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-8 flex items-center gap-3">
-            <span className="text-white/30 text-sm">//</span> START A PROJECT
+            <span className="text-white/30 text-sm">{"//"}</span> START A PROJECT
           </p>
           <div className="group inline-block cursor-pointer">
             <h2 className="anim-up-footer text-6xl md:text-[8rem] lg:text-[11rem] font-bold tracking-[-0.04em] leading-[0.85] uppercase transition-colors duration-500 hover:text-archivi-accent">
-              LET'S TALK
+              LET&apos;S TALK
             </h2>
           </div>
         </div>

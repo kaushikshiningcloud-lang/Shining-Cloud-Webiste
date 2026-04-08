@@ -45,7 +45,7 @@ export default function ProcessTimeline() {
         <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end">
           <div className="anim-up-proc">
             <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-6 flex items-center gap-3">
-              <span className="text-black/30 text-sm">//</span> METHODOLOGY
+              <span className="text-black/30 text-sm">{"//"}</span> METHODOLOGY
             </p>
             <h2 className="text-5xl md:text-7xl font-bold tracking-[-0.03em] leading-[0.9]">
               STRUCTURED <br /> PRECISION

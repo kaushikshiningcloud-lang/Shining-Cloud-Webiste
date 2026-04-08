@@ -4,7 +4,7 @@ export default function ContactPage() {
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="mb-24">
           <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-8 flex items-center gap-3">
-            <span className="text-black/30 text-sm">//</span> PROJECT INQUIRY
+            <span className="text-black/30 text-sm">{"//"}</span> PROJECT INQUIRY
           </p>
           <h1 className="text-6xl md:text-[8rem] lg:text-[11rem] font-bold tracking-[-0.04em] leading-[0.85] uppercase">
             CONTACT.
@@ -13,7 +13,7 @@ export default function ContactPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 border-t border-black/10 pt-16">
            <div className="lg:col-span-5 flex flex-col gap-8">
-              <h3 className="text-2xl font-bold uppercase tracking-tight">Let's craft the Unbuilt.</h3>
+              <h3 className="text-2xl font-bold uppercase tracking-tight">Let&apos;s craft the Unbuilt.</h3>
               <p className="text-sm font-medium text-black/60 leading-relaxed max-w-sm">
                  Please provide structural context, phase timeline, and architectural intention. Our global directors will coordinate within 24 hours.
               </p>

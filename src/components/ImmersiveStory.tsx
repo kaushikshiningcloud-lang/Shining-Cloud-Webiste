@@ -48,7 +48,7 @@ export default function ImmersiveStory() {
             NARRATIVE <br/> THROUGH <br/> FRAMES.
           </h2>
           <p className="hidden md:block text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-2">
-            // VISUAL STORYTELLING
+            {"//"} VISUAL STORYTELLING
           </p>
         </div>
 

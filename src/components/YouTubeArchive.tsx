@@ -11,7 +11,7 @@ export default function YouTubeArchive() {
         <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-black/10 pb-12">
             <div>
               <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-6 flex items-center gap-3">
-                <span className="text-black/30 text-sm">//</span> MOTION CAPTURE
+                <span className="text-black/30 text-sm">{"//"}</span> MOTION CAPTURE
               </p>
               <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-[-0.03em] leading-[0.9]">
                 KINETIC <br/> PROFILES.

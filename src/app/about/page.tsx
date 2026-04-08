@@ -15,7 +15,7 @@ export default function AboutPage() {
       {/* About Hero Segment */}
       <section className="max-w-[1600px] mx-auto px-6 md:px-12 mb-32">
         <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-8 flex items-center gap-3">
-          <span className="text-black/30 text-sm">//</span> THE STUDIO
+          <span className="text-black/30 text-sm">{"//"}</span> THE STUDIO
         </p>
         <h1 className="text-5xl md:text-8xl lg:text-[10rem] font-bold tracking-[-0.04em] leading-[0.85] uppercase mb-16">
           SPATIAL <br/> ARCHIVES.
@@ -40,14 +40,14 @@ export default function AboutPage() {
       <section className="py-32 bg-[#E1DED8] px-6 md:px-12 border-t border-black/10 relative overflow-hidden">
         <div className="max-w-[1600px] mx-auto">
             <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-16 flex items-center gap-3">
-              <span className="text-black/30 text-sm">//</span> INDUSTRY RECEPTION
+              <span className="text-black/30 text-sm">{"//"}</span> INDUSTRY RECEPTION
             </p>
             
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                {testimonials.map((t, idx) => (
                   <div key={idx} className="bg-white p-12 flex flex-col justify-between min-h-[300px]">
                       <h3 className="text-xl md:text-2xl font-medium tracking-tight leading-[1.3] mb-12">
-                         "{t.text}"
+                         &quot;{t.text}&quot;
                       </h3>
                       <div>
                          <p className="text-[11px] font-bold tracking-[0.2em] uppercase text-archivi-dark">{t.author}</p>

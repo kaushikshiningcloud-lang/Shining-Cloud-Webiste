@@ -13,7 +13,7 @@ export default function ServicesPage() {
         
         <div className="mb-32">
           <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-8 flex items-center gap-3">
-            <span className="text-white/30 text-sm">//</span> CORE OFFERINGS
+            <span className="text-white/30 text-sm">{"//"}</span> CORE OFFERINGS
           </p>
           <h1 className="text-6xl md:text-[8rem] lg:text-[11rem] font-bold tracking-[-0.04em] leading-[0.85] uppercase">
             SERVICES.

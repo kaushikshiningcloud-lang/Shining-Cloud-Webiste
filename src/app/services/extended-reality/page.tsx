@@ -12,7 +12,7 @@ export default function ExtendedRealityPage() {
       <div className="max-w-[1600px] mx-auto px-6 md:px-12">
         <div className="mb-24 md:mb-32">
           <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-8 flex items-center gap-3">
-            <span className="text-black/30 text-sm">//</span> SERVICE: XR LABS
+            <span className="text-black/30 text-sm">{"//"}</span> SERVICE: XR LABS
           </p>
           <h1 className="text-5xl md:text-[6rem] lg:text-[8rem] font-bold tracking-[-0.04em] leading-[0.85] uppercase mb-12">
             EXTENDED <br/> REALITY.

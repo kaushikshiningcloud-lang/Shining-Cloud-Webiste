@@ -47,7 +47,7 @@ export default function QualityExpectation() {
 
         <div className="flex flex-col">
           <p className="anim-up-quality text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-8 flex items-center gap-3">
-            <span className="text-white/30 text-sm">//</span> THE GUARANTEE
+            <span className="text-white/30 text-sm">{"//"}</span> THE GUARANTEE
           </p>
           <h2 className="anim-up-quality text-4xl md:text-6xl font-bold tracking-[-0.03em] uppercase leading-[1.1] mb-12">
             WHAT YOU SEE <br/>
