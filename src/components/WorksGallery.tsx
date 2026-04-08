@@ -5,13 +5,14 @@ import Image from 'next/image';
 import gsap from 'gsap';
 
 export default function WorksGallery({ images }: { images: string[] }) {
+  const featuredImages = images.slice(0, 20); // Limit to 20 for performance/stability
   const zWrapperRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
   const [offsets, setOffsets] = useState<{x: number, y: number}[]>([]);
 
   useEffect(() => {
     // Generate random offsets on the client after mount to satisfy purity rules
-    const newOffsets = images.map(() => ({
+    const newOffsets = featuredImages.map(() => ({
        x: Math.random() * 80 - 40,
        y: Math.random() * 60 - 30
     }));
@@ -19,13 +20,13 @@ export default function WorksGallery({ images }: { images: string[] }) {
     setOffsets(newOffsets);
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
-  }, [images]);
+  }, [featuredImages]);
 
   useEffect(() => {
     if (!mounted || !zWrapperRef.current) return;
     
     const depthSpacing = 1200;
-    const totalDepth = images.length * depthSpacing;
+    const totalDepth = featuredImages.length * depthSpacing;
 
     const ctx = gsap.context(() => {
        gsap.to(zWrapperRef.current, {
@@ -38,7 +39,7 @@ export default function WorksGallery({ images }: { images: string[] }) {
     }, zWrapperRef);
 
     return () => ctx.revert();
-  }, [mounted, images.length]);
+  }, [mounted, featuredImages.length]);
 
   return (
     <div 
@@ -50,7 +51,7 @@ export default function WorksGallery({ images }: { images: string[] }) {
          className="absolute inset-0 w-full h-full flex flex-col items-center justify-center pointer-events-none"
          style={{ transformStyle: 'preserve-3d' }}
        >
-          {mounted && offsets.length === images.length && images.map((img, i) => {
+          {mounted && offsets.length === featuredImages.length && featuredImages.map((img, i) => {
              const zPos = -i * 1200;
              const { x, y } = offsets[i];
 

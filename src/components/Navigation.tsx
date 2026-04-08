@@ -30,17 +30,17 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-6 md:px-12 py-8 mix-blend-difference text-white pointer-events-none">
+      <nav className="fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-6 md:px-12 py-6 bg-[#020202]/60 backdrop-blur-xl border-b border-white/5 text-white pointer-events-none transition-all duration-300">
         <Link 
           href="/" 
-          className="relative w-[140px] md:w-[180px] h-[40px] md:h-[60px] cursor-pointer pointer-events-auto"
+          className="relative w-[140px] md:w-[180px] h-[35px] md:h-[45px] cursor-pointer pointer-events-auto"
           onClick={() => setIsOpen(false)}
         >
           <Image 
             src="/images/logo.png" 
             alt="Shining Cloud Studio" 
             fill 
-            className="object-contain object-left drop-shadow-lg" 
+            className="object-contain object-left drop-shadow-2xl" 
             priority 
           />
         </Link>
@@ -51,7 +51,7 @@ export default function Navigation() {
             <Link 
               key={link.name} 
               href={link.href} 
-              className="hover:text-[#9F8C75] transition-colors"
+              className="hover:text-[#9F8C75] transition-colors duration-300"
             >
               {link.name}
             </Link>
