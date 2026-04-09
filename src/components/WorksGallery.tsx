@@ -42,7 +42,7 @@ export default function WorksGallery({ images }: { images: string[] }) {
           },
           {
             scale: 2.5,
-            opacity: 0.8,
+            opacity: 1, // Full opacity for more vibrant renders
             xPercent: offsets[i].x * 50, 
             yPercent: offsets[i].y * 50,
             duration: duration,
