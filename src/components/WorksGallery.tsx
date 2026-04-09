@@ -1,11 +1,11 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import Image from 'next/image';
 import gsap from 'gsap';
 
 export default function WorksGallery({ images }: { images: string[] }) {
-  const featuredImages = images.slice(0, 20);
+  const featuredImages = useMemo(() => images.slice(0, 20), [images]);
   const containerRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
   const [offsets, setOffsets] = useState<{x: number, y: number}[]>([]);
