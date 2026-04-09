@@ -34,7 +34,8 @@ export default function WorksGallery({ images }: { images: string[] }) {
            ease: 'sine.inOut',
            duration: 120,
            yoyo: true,
-           repeat: -1
+           repeat: -1,
+           force3D: true
        });
     }, zWrapperRef);
 
@@ -44,7 +45,7 @@ export default function WorksGallery({ images }: { images: string[] }) {
   return (
     <div 
       className="relative w-full h-[100dvh] bg-[#020202] overflow-hidden" 
-      style={{ perspective: '800px' }}
+      style={{ perspective: '1200px' }} // Increased perspective for smoother depth transitions
     >
        <div 
          ref={zWrapperRef} 
@@ -61,7 +62,9 @@ export default function WorksGallery({ images }: { images: string[] }) {
                  className="gallery-item absolute w-[70vw] md:w-[45vw] lg:w-[35vw] aspect-[4/3] md:aspect-video border-[1px] border-white/10 opacity-100 shadow-[0_0_100px_rgba(0,0,0,0.8)] filter brightness-75 transition-all duration-500 pointer-events-auto"
                  style={{
                     transform: `translate3d(${x}vw, ${y}vh, ${zPos}px)`,
-                    willChange: 'transform'
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden',
+                    transformStyle: 'preserve-3d'
                  }}
                >
                  <Image 
