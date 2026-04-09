@@ -59,12 +59,14 @@ export default function WorksGallery({ images }: { images: string[] }) {
              return (
                <div 
                  key={i} 
-                 className="gallery-item absolute w-[70vw] md:w-[45vw] lg:w-[35vw] aspect-[4/3] md:aspect-video border-[1px] border-white/10 opacity-100 shadow-[0_0_100px_rgba(0,0,0,0.8)] filter brightness-75 transition-all duration-500 pointer-events-auto"
+                 className="gallery-item absolute w-[70vw] md:w-[45vw] lg:w-[35vw] aspect-[4/3] md:aspect-video border-[1px] border-white/10 opacity-100 shadow-[0_0_100px_rgba(0,0,0,0.8)] filter brightness-75 transition-[filter,opacity] duration-500 pointer-events-auto"
                  style={{
-                    transform: `translate3d(${x}vw, ${y}vh, ${zPos}px)`,
+                    transform: `translate3d(${x}vw, ${y}vh, ${zPos}px) scale(1.02)`,
                     willChange: 'transform',
                     backfaceVisibility: 'hidden',
-                    transformStyle: 'preserve-3d'
+                    WebkitBackfaceVisibility: 'hidden',
+                    transformStyle: 'preserve-3d',
+                    WebkitTransformStyle: 'preserve-3d'
                  }}
                >
                  <Image 
