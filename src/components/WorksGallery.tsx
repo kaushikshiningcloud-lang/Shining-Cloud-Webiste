@@ -29,10 +29,10 @@ export default function WorksGallery({ images }: { images: string[] }) {
     
     const ctx = gsap.context(() => {
       items.forEach((item, i) => {
-        const delay = (i / items.length) * -20; // Staggered start positions
+        const duration = 45; // Slower, more cinematic duration
+        const delay = (i / items.length) * -duration; 
         
         // Infinite forward glide using scale and opacity
-        // This is 100% flicker-free because it avoids CSS 3D Depth Math
         gsap.fromTo(item, 
           { 
             scale: 0.2, 
@@ -43,14 +43,13 @@ export default function WorksGallery({ images }: { images: string[] }) {
           {
             scale: 2.5,
             opacity: 0.8,
-            xPercent: offsets[i].x * 50, // Parallax effect
+            xPercent: offsets[i].x * 50, 
             yPercent: offsets[i].y * 50,
-            duration: 20,
+            duration: duration,
             repeat: -1,
             delay: delay,
             ease: "power1.in",
             onRepeat: function() {
-              // Smoothly reset opacity for the next loop
               gsap.set(item, { opacity: 0 });
             }
           }
