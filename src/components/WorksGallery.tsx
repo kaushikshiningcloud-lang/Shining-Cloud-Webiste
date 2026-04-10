@@ -356,28 +356,26 @@ export default function WorksGallery({ images: _images }: { images: string[] }) 
       {/* Full-screen interactive canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full block" />
 
-      {/* Overlay labels */}
-      <div className="absolute inset-0 z-10 pointer-events-none flex flex-col items-center justify-end pb-16 text-center">
-        <p className="text-[9px] md:text-[10px] font-bold tracking-[0.5em] uppercase text-[#C8A96E]/70 mb-3">
-          // SHINING CLOUD — ARCHITECTURAL ARCHIVE
-        </p>
-        <div className="w-[1px] h-10 bg-gradient-to-b from-[#C8A96E]/50 to-transparent mb-4" />
-        <p className="text-[9px] font-bold tracking-[0.4em] uppercase text-white/25">
-          Move cursor to interact · Scroll to explore
+      {/* Top-left branding — safe zone above buildings */}
+      <div className="absolute top-24 left-6 md:left-12 z-20 pointer-events-none">
+        <p className="text-[9px] font-bold tracking-[0.4em] uppercase text-[#C8A96E]/60">
+          // ARCHITECTURAL ARCHIVE
         </p>
       </div>
 
-      {/* CATALOG title — large, ghosted, top-center */}
-      <div className="absolute top-[22%] inset-x-0 z-10 pointer-events-none text-center">
-        <h1 className="text-[18vw] font-black uppercase tracking-[-0.06em] leading-none select-none"
-            style={{ color: 'transparent', WebkitTextStroke: '1px rgba(200,169,110,0.12)' }}>
-          CATALOG.
-        </h1>
+      {/* Bottom-right hint — safe zone below buildings */}
+      <div className="absolute bottom-8 right-6 md:right-12 z-20 pointer-events-none text-right">
+        <p className="text-[8px] font-bold tracking-[0.3em] uppercase text-white/20">
+          Move cursor to interact
+        </p>
+        <p className="text-[8px] font-bold tracking-[0.3em] uppercase text-white/15 mt-1">
+          Scroll to explore
+        </p>
       </div>
 
-      {/* Radial vignette */}
+      {/* Radial vignette — darkens edges so buildings feel contained */}
       <div className="absolute inset-0 z-[5] pointer-events-none"
-           style={{ background: 'radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, #020202 100%)' }} />
+           style={{ background: 'radial-gradient(ellipse 70% 65% at 50% 50%, transparent 30%, #020202 100%)' }} />
     </div>
   );
 }
