@@ -74,16 +74,16 @@ export default function Navigation() {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden flex flex-col items-center justify-center`}
       >
-        <div className="flex flex-col gap-8 text-center">
+        <div className="flex flex-col gap-10 text-center">
           {navLinks.map((link, index) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className={`text-2xl font-bold tracking-[0.3em] uppercase transition-all duration-300 ${
-                isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              className={`text-3xl font-bold tracking-[0.3em] uppercase text-white transition-all duration-500 hover:text-[#C8A96E] ${
+                isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              style={{ transitionDelay: `${index * 80}ms` }}
             >
               {link.name}
             </Link>

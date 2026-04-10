@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -40,6 +41,20 @@ export default function HeroSection() {
 
   return (
     <section ref={containerRef} className="relative w-full h-[100dvh] bg-archivi-dark text-white overflow-hidden">
+      
+      {/* Hero Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-bg.jpg"
+          alt="Shining Cloud Architecture"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        {/* Dark gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#020202]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
+      </div>
       
       {/* Fallback CSS Marquee to guarantee smooth endless scroll */}
       <style dangerouslySetInnerHTML={{__html: `
