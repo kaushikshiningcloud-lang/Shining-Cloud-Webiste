@@ -77,8 +77,8 @@ export default function WorksGallery({ images }: { images: string[] }) {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    const ctx = canvas.getContext('2d')!; // Non-null: canvas always supports 2d
 
     const PARTICLE_COUNT = 320;
     const GOLD = '#C8A96E';
