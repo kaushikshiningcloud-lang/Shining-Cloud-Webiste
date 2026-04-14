@@ -24,13 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${outfit.variable} font-sans bg-archivi-light text-archivi-dark antialiased selection:bg-[#9F8C75]/30 selection:text-[#111] overflow-x-hidden flex flex-col min-h-screen`}>
+        <Navigation />
         <SmoothScrolling>
-          <Navigation />
           <main className="flex-1 w-full relative">
             {children}
           </main>
-          <Footer />
         </SmoothScrolling>
+        <Footer />
       </body>
     </html>
   );

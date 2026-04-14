@@ -67,41 +67,44 @@ export default function Navigation() {
         </button>
       </nav>
 
-      {/* Mobile Menu Overlay */}
-      <div 
-        className={`fixed inset-0 z-[2000] bg-[#020202] transition-transform duration-500 ease-in-out transform ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:hidden flex flex-col items-center justify-center`}
-      >
-        <button 
-          onClick={() => setIsOpen(false)}
-          className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
-          aria-label="Close menu"
-        >
-          <X size={32} />
-        </button>
+      {/* Bulletproof Mobile Menu Overlay */}
+      {isOpen && (
+        <div className="fixed inset-0 z-[2000] bg-[#020202] flex flex-col items-center justify-center p-6 md:hidden overflow-hidden">
+          {/* Internal Close Button */}
+          <button 
+            onClick={() => setIsOpen(false)}
+            className="absolute top-8 right-8 text-white p-2"
+            aria-label="Close menu"
+          >
+            <X size={32} />
+          </button>
 
-        <div className="relative z-[2001] w-full flex flex-col gap-12 items-center justify-center">
-          <p className="text-white/20 text-[10px] tracking-[0.4em] uppercase mb-4">Navigation</p>
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="text-4xl font-bold tracking-[0.2em] uppercase text-white active:text-[#C8A96E]"
-            >
-              {link.name}
-            </Link>
-          ))}
+          <div className="flex flex-col gap-12 items-center justify-center w-full">
+            <p className="text-white/10 text-[10px] tracking-[0.5em] uppercase mb-4">Shining Cloud Menu</p>
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-4xl xs:text-5xl font-bold tracking-[0.2em] uppercase text-white hover:text-archivi-accent active:text-archivi-accent transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className="absolute bottom-12 text-white/20 text-[9px] tracking-[0.2em] uppercase">
+            EST. 2026 // VISUAL STORYTELLING
+          </div>
         </div>
+      )}
         
-        {/* Mobile Footer Info */}
-        <div className={`absolute bottom-12 text-[10px] tracking-[0.2em] uppercase opacity-50 transition-opacity duration-1000 ${
-          isOpen ? 'opacity-50' : 'opacity-0'
-        }`}>
+      {/* Mobile Footer Info - Hidden when menu open */}
+      {!isOpen && (
+        <div className="fixed bottom-12 left-6 text-[10px] tracking-[0.2em] uppercase opacity-40 text-white z-[100] md:hidden">
           Shining Cloud Studio © 2026
         </div>
-      </div>
+      )}
     </>
   );
 }
