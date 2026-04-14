@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import Marquee from "@/components/Marquee";
-import FeaturedProjects from "@/components/FeaturedProjects";
+import ImmersiveStory from "@/components/ImmersiveStory";
+import ProcessTimeline from "@/components/ProcessTimeline";
 
 export default function Home() {
   return (
@@ -8,8 +9,8 @@ export default function Home() {
       <HeroSection />
       <Marquee />
       <div className="bg-archivi-light w-full">
-        {/* The interactive kiosk - Light Theme */}
-        <FeaturedProjects />
+        <ImmersiveStory />
+        <ProcessTimeline />
       </div>
     </div>
   );

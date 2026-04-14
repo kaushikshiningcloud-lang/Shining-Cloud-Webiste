@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 export default function ServicesPage() {
   const services = [
-    { title: "EXTENDED REALITY", desc: "Augmented, Virtual, and Mixed Reality integrations driving interactive spatial discovery.", route: "/services/extended-reality" },
-    { title: "3D ANIMATION", desc: "Cinematic fly-throughs and sequenced architectural reveals simulating physical presence.", route: "/services/3d-animation" },
-    { title: "SCALE MODELS", desc: "Interactive digital constructs reflecting identical physical proportions and lighting.", route: "/services/scale-models" }
+    { title: "EXTENDED REALITY", desc: "Augmented, Virtual, and Mixed Reality integrations driving interactive spatial discovery.", route: "/works#extended-reality" },
+    { title: "3D ANIMATION", desc: "Cinematic fly-throughs and sequenced architectural reveals simulating physical presence.", route: "/works#3d-animations" },
+    { title: "SCALE MODELS", desc: "Interactive digital constructs reflecting identical physical proportions and lighting.", route: "/works#scale-models" }
   ];
 
   return (

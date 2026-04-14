@@ -8,11 +8,12 @@ import { ArrowDownRight } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 const processes = [
-  { id: '01', title: 'INPUT & DISCOVERY', desc: 'Synthesizing blueprints, references, and styling parameters to establish the geometric foundation.' },
-  { id: '02', title: 'SPATIAL CONCEPT', desc: 'Developing the initial 3D geometry and defining the pure lighting schema.' },
-  { id: '03', title: 'CLIENT DIALOG', desc: 'Iterative feedback on camera angles, materials, and atmospheric intent.' },
-  { id: '04', title: 'REFINEMENT', desc: 'Micro-adjustments and precision mapping based on explicit evaluation.' },
-  { id: '05', title: 'FINAL OUTPUT', desc: 'Cinematic high-resolution rendering, grading, and post-production delivery.' },
+  { id: '01', title: 'INPUT COLLECTION', desc: 'Synthesizing CAD files, architectural references, and styling briefs to establish the foundation.' },
+  { id: '02', title: 'Concept Development', desc: 'Developing the initial scene setup and defining the precise camera angles for the narrative.' },
+  { id: '03', title: 'Initial Model', desc: 'Detailed 3D geometry construction and preliminary material mapping for visual accuracy.' },
+  { id: '04', title: 'Client Review', desc: 'Iterative feedback round focused on geometry, lighting intent, and material selection.' },
+  { id: '05', title: 'Revisions', desc: 'Precision refinements and adjustments based on the approved feedback loop.' },
+  { id: '06', title: 'Final Output', desc: 'High-resolution rendering and post-production delivery in the agreed format.' },
 ];
 
 export default function ProcessTimeline() {
@@ -60,7 +61,7 @@ export default function ProcessTimeline() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {processes.map((proc, index) => {
             // Make the first card span 2 cols on large screens
-            const spanClass = index === 0 ? 'lg:col-span-2 bg-[#E1DED8]' : 'bg-white';
+            const spanClass = 'bg-white';
             
             return (
               <div 
