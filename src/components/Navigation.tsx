@@ -29,7 +29,7 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-[100] flex justify-between items-center px-6 md:px-12 py-6 bg-[#020202]/60 backdrop-blur-xl border-b border-white/5 text-white pointer-events-none transition-all duration-300">
+      <nav className="fixed top-0 left-0 w-full z-[1000] flex justify-between items-center px-6 md:px-12 py-6 bg-[#020202]/80 backdrop-blur-xl border-b border-white/5 text-white transition-all duration-300">
         <Link 
           href="/" 
           className="relative w-[140px] md:w-[180px] h-[35px] md:h-[45px] cursor-pointer pointer-events-auto"
@@ -69,7 +69,7 @@ export default function Navigation() {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 z-[90] bg-[#020202] transition-transform duration-500 ease-in-out transform ${
+        className={`fixed inset-0 z-[990] bg-[#020202] transition-transform duration-500 ease-in-out transform ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden flex flex-col items-center justify-center`}
       >
