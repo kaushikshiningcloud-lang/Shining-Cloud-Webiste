@@ -8,20 +8,6 @@ export default function YouTubeArchive() {
   return (
     <section className="bg-archivi-light text-archivi-dark py-32 px-6 relative z-20">
       <div className="max-w-[1600px] mx-auto">
-        <div className="mb-24 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-black/10 pb-12">
-            <div>
-              <p className="text-archivi-accent text-[11px] tracking-[0.2em] font-bold uppercase mb-6 flex items-center gap-3">
-                <span className="text-black/30 text-sm">{"//"}</span> MOTION CAPTURE
-              </p>
-              <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-[-0.03em] leading-[0.9]">
-                KINETIC <br/> PROFILES.
-              </h2>
-            </div>
-            <p className="text-sm text-black/60 font-medium max-w-sm mt-8 md:mt-0 leading-relaxed">
-              Our curated archive of architectural sequences, VR teardowns, and mixed-reality walkthroughs extracted directly from live deployments.
-            </p>
-        </div>
-
         {/* Archivi Bento Grid for Videos */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px]">
            {vids.map((id, index) => {

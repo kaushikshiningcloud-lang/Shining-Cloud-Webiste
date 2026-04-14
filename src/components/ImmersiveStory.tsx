@@ -11,7 +11,7 @@ const storySteps = [
   { id: 1, title: 'I. THE VISION', text: 'Capturing exterior essence in true geographic context.', src: '/images/exterior.jpg' },
   { id: 2, title: 'II. INTIMATE DETAIL', text: 'Focusing on pure materiality, shadow, and light.', src: '/images/project1.jpg' },
   { id: 3, title: 'III. GRAND SCALE', text: 'Understanding the architectural geometry from above.', src: '/images/interior.jpg' },
-  { id: 4, title: 'IV. NOCTURNAL', text: 'How spatial perception shifts radically after dusk.', src: '/images/project2.jpg' },
+  { id: 4, title: 'IV. NOCTURNAL', text: 'How spatial perception shifts radically after dusk.', src: '/images/works/SC_48.jpg' },
 ];
 
 export default function ImmersiveStory() {
