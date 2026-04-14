@@ -18,7 +18,7 @@ export default function HeroSection() {
     const ctx = gsap.context(() => {
       gsap.fromTo('.anim-hero', 
         { y: 60, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1.5, stagger: 0.15, ease: 'power3.out' }
+        { y: 0, opacity: 1, duration: 1.5, stagger: 0.15, ease: 'power3.out', force3D: true }
       );
 
       gsap.fromTo('.anim-line',

@@ -71,7 +71,10 @@ export default function WorksGridWithPreview({ images }: WorksGridWithPreviewPro
 
       {/* Lightbox Overlay */}
       {selectedIdx !== null && (
-        <div className="fixed inset-0 z-[1000] bg-[#020202] flex items-center justify-center p-4 md:p-12 animate-in fade-in duration-300">
+        <div 
+          className="fixed inset-0 z-[1000] bg-[#020202]/95 backdrop-blur-2xl flex items-center justify-center p-4 md:p-12 transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]"
+          style={{ animation: 'fadeIn 0.5s cubic-bezier(0.23, 1, 0.32, 1) forwards' }}
+        >
           
           {/* Controls Hooked to Backdrop */}
           <div className="absolute inset-0 cursor-zoom-out" onClick={() => setSelectedIdx(null)} />
@@ -79,36 +82,38 @@ export default function WorksGridWithPreview({ images }: WorksGridWithPreviewPro
           {/* Nav Buttons */}
           <button 
             onClick={(e) => { e.stopPropagation(); handlePrev(); }}
-            className="absolute left-4 md:left-12 z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 hover:border-white/30 transition-all transition-transform active:scale-95"
+            className="absolute left-4 md:left-12 z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 hover:border-white/30 transition-all active:scale-95 will-change-transform"
           >
             <ChevronLeft size={24} />
           </button>
 
           <button 
             onClick={(e) => { e.stopPropagation(); handleNext(); }}
-            className="absolute right-4 md:right-12 z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 hover:border-white/30 transition-all transition-transform active:scale-95"
+            className="absolute right-4 md:right-12 z-10 w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-white/10 hover:border-white/30 transition-all active:scale-95 will-change-transform"
           >
             <ChevronRight size={24} />
           </button>
 
           <button 
             onClick={() => setSelectedIdx(null)}
-            className="absolute top-6 right-6 md:top-12 md:right-12 z-10 text-white opacity-40 hover:opacity-100 transition-opacity flex items-center gap-2 group"
+            className="absolute top-6 right-6 md:top-12 md:right-12 z-10 text-white opacity-40 hover:opacity-100 transition-all flex items-center gap-2 group will-change-transform"
           >
             <span className="text-[10px] font-bold tracking-[0.2em] uppercase hidden md:block group-hover:mr-2 transition-all">CLOSE</span>
             <X size={28} />
           </button>
 
           {/* Featured Image */}
-          <div className="relative w-full h-full max-w-6xl max-h-[80vh] flex items-center justify-center pointer-events-none">
-            <Image
-              src={`/images/works/${images[selectedIdx]}`}
-              alt={`Full View Render ${selectedIdx + 1}`}
-              fill
-              className="object-contain"
-              priority
-              quality={100}
-            />
+          <div className="relative w-full h-full max-w-6xl max-h-[80vh] flex items-center justify-center pointer-events-none overflow-hidden">
+            <div className="relative w-full h-full animate-in zoom-in-95 duration-500 ease-out">
+              <Image
+                src={`/images/works/${images[selectedIdx]}`}
+                alt={`Full View Render ${selectedIdx + 1}`}
+                fill
+                className="object-contain will-change-transform"
+                priority
+                quality={100}
+              />
+            </div>
           </div>
 
           {/* Counter */}

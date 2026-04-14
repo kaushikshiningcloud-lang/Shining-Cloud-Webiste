@@ -22,18 +22,22 @@ export default function ImmersiveStory() {
 
     const items = gsap.utils.toArray('.story-row') as HTMLElement[];
     items.forEach((item) => {
+      // Hardware acceleration hint
+      item.style.willChange = 'transform, opacity';
+
       gsap.fromTo(
         item.querySelectorAll('.anim-up-story'),
-        { y: 40, opacity: 0 },
+        { y: 60, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1.2,
-          stagger: 0.1,
-          ease: 'power3.out',
+          duration: 1.6,
+          stagger: 0.15,
+          ease: 'expo.out',
+          force3D: true,
           scrollTrigger: {
             trigger: item,
-            start: 'top 80%',
+            start: 'top 85%',
           }
         }
       );
@@ -67,13 +71,14 @@ export default function ImmersiveStory() {
               </div>
 
               {/* Image Block */}
-              <div className={`anim-up-story relative lg:col-span-8 w-full aspect-video md:aspect-[21/9] bg-[#E1DED8] overflow-hidden ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
+              <div className={`anim-up-story relative lg:col-span-8 w-full aspect-video md:aspect-[21/9] bg-[#E1DED8] border border-black/5 overflow-hidden ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                 <Image
                   src={step.src}
                   alt={step.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 66vw"
-                  className="object-cover transition-transform duration-[1.5s] hover:scale-[1.02]"
+                  className="object-cover transition-transform duration-[3s] hover:scale-[1.01] will-change-transform"
+                  priority={index === 0}
                 />
               </div>
             </div>

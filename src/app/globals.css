@@ -8,17 +8,27 @@
 }
 
 @layer base {
-  html, body {
+  html {
+    scroll-behavior: auto !important;
+  }
+  
+  body {
     background-color: var(--color-archivi-light);
     color: var(--color-archivi-dark);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Hardware acceleration layer */
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
   }
   
   ::-webkit-scrollbar {
     display: none;
   }
+  
   * {
     -ms-overflow-style: none;
     scrollbar-width: none;
-    will-change: auto;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   }
 }
