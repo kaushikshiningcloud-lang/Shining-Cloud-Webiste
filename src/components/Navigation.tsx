@@ -69,20 +69,28 @@ export default function Navigation() {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 z-[990] bg-[#020202] transition-transform duration-500 ease-in-out transform ${
+        className={`fixed inset-0 z-[2000] bg-[#020202] transition-transform duration-500 ease-in-out transform ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden flex flex-col items-center justify-center`}
       >
-        <div className="flex flex-col gap-10 text-center">
+        <button 
+          onClick={() => setIsOpen(false)}
+          className="absolute top-6 right-6 text-white/50 hover:text-white transition-colors"
+          aria-label="Close menu"
+        >
+          <X size={32} />
+        </button>
+
+        <div className="relative z-[2001] flex flex-col gap-10 text-center">
           {navLinks.map((link, index) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className={`text-3xl font-bold tracking-[0.3em] uppercase text-white transition-all duration-500 hover:text-[#C8A96E] ${
-                isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              className={`text-3xl md:text-4xl font-bold tracking-[0.3em] uppercase text-white hover:text-[#C8A96E] transition-all duration-300 ${
+                isOpen ? 'opacity-100' : 'opacity-0'
               }`}
-              style={{ transitionDelay: `${index * 80}ms` }}
+              style={{ transitionDelay: `${index * 50}ms` }}
             >
               {link.name}
             </Link>
