@@ -81,16 +81,14 @@ export default function Navigation() {
           <X size={32} />
         </button>
 
-        <div className="relative z-[2001] flex flex-col gap-10 text-center">
-          {navLinks.map((link, index) => (
+        <div className="relative z-[2001] w-full flex flex-col gap-12 items-center justify-center">
+          <p className="text-white/20 text-[10px] tracking-[0.4em] uppercase mb-4">Navigation</p>
+          {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className={`text-3xl md:text-4xl font-bold tracking-[0.3em] uppercase text-white hover:text-[#C8A96E] transition-all duration-300 ${
-                isOpen ? 'opacity-100' : 'opacity-0'
-              }`}
-              style={{ transitionDelay: `${index * 50}ms` }}
+              className="text-4xl font-bold tracking-[0.2em] uppercase text-white active:text-[#C8A96E]"
             >
               {link.name}
             </Link>
