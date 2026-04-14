@@ -69,32 +69,32 @@ export default function Navigation() {
 
       {/* Bulletproof Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-[2000] bg-[#020202] flex flex-col items-center justify-center p-6 md:hidden overflow-hidden">
+        <div className="fixed inset-x-0 top-0 h-[100dvh] z-[2000] bg-[#020202] flex flex-col items-center justify-center p-8 md:hidden overflow-hidden">
           {/* Internal Close Button */}
           <button 
             onClick={() => setIsOpen(false)}
-            className="absolute top-8 right-8 text-white p-2"
+            className="absolute top-8 right-8 text-white p-2 z-[2010]"
             aria-label="Close menu"
           >
             <X size={32} />
           </button>
 
-          <div className="flex flex-col gap-12 items-center justify-center w-full">
-            <p className="text-white/10 text-[10px] tracking-[0.5em] uppercase mb-4">Shining Cloud Menu</p>
+          <div className="relative z-[2001] w-full flex flex-col gap-10 items-center justify-center">
+            <p className="text-white/10 text-[9px] tracking-[0.5em] uppercase mb-2">ARCHIVE NAVIGATION</p>
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-4xl xs:text-5xl font-bold tracking-[0.2em] uppercase text-white hover:text-archivi-accent active:text-archivi-accent transition-colors"
+                className="text-4xl xs:text-5xl font-bold tracking-[0.2em] uppercase text-white hover:text-archivi-accent active:text-archivi-accent py-2"
               >
                 {link.name}
               </Link>
             ))}
           </div>
 
-          <div className="absolute bottom-12 text-white/20 text-[9px] tracking-[0.2em] uppercase">
-            EST. 2026 // VISUAL STORYTELLING
+          <div className="absolute bottom-12 text-white/20 text-[9px] tracking-[0.2em] uppercase z-[2001]">
+            SHINING CLOUD // EST. 2026
           </div>
         </div>
       )}
