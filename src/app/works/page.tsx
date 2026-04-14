@@ -67,10 +67,13 @@ export default async function WorksPage() {
           <h2 className="text-4xl md:text-6xl font-black uppercase tracking-[-0.04em] text-white underline decoration-white/10 decoration-1 underline-offset-[12px]">
             DIGITAL CONSTRUCTS.
           </h2>
-          <div className="mt-24 p-24 border border-dashed border-white/10 flex flex-col items-center justify-center text-center">
-             <p className="text-xs font-bold tracking-[0.2em] uppercase text-white/20">Section pending additional assets</p>
-             <p className="text-[10px] tracking-widest text-white/10 mt-2 italic uppercase">Coming Soon</p>
-          </div>
+        </div>
+        <div className="w-full max-w-[1600px] mx-auto px-6 md:px-12 pb-32">
+          <WorksGridWithPreview images={[
+            'scale-models/scale_01.jpg',
+            'scale-models/scale_02.jpg',
+            'scale-models/scale_03.jpg'
+          ]} />
         </div>
       </section>
 
